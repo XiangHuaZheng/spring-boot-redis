@@ -1,2 +1,2 @@
 # hua-nosql-myRedis
-springBoot+mabatis+redis
+springBoot+mabatis+redis+mysql
