@@ -19,9 +19,17 @@ class SpringBootCacheApplicationTests {
     @Autowired
     StringRedisTemplate stringRedisTemplate;//操作K V都是字符串
 
+    @Autowired
+    RedisTemplate empRedisTemplate;
+
     @Test
     void testRedis(){
         stringRedisTemplate.opsForValue().append("msg","hello");
+    }
+
+    @Test
+    void testRedisByObject(){
+        empRedisTemplate.opsForValue().set("emp-01",employeeMapper.getEmpById(2));
     }
 
     @Test
