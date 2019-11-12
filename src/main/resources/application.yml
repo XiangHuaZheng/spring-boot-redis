@@ -2,9 +2,9 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://106.15.248.97:33306/cache
+    url: jdbc:mysql://127.0.0.1:3306/cache
     username: root
-    password: ******
+    password: 1130
     initialSize: 50
     minIdle: 5
     maxActive: 100000
@@ -22,8 +22,8 @@ spring:
     useGlobalDataSourceStat: true
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
   redis:
-    host: 106.15.248.97
-    password: ******
+    host: 127.0.0.1
+    password: zheng1130
     database: 0
     port: 6379
 

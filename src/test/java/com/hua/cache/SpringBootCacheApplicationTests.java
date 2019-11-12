@@ -28,7 +28,7 @@ class SpringBootCacheApplicationTests {
 
         CountDownLatch countDownLatch = new CountDownLatch(1000);
         long l = System.currentTimeMillis();
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 5000000; i++) {
             final int j = i;
             taskExecutor.execute(new Runnable() {
                 @Override

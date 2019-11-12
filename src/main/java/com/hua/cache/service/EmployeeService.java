@@ -19,7 +19,7 @@ public class EmployeeService {
         employeeMapper.insertEmp(employee);
     }
 
-    @CacheEvict(key = "#id")
+    //@CacheEvict(key = "#id")
     public void deleteEmp(Integer id){
         employeeMapper.deleteEmp(id);
     }
