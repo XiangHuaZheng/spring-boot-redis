@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://106.15.248.97:33306/cache
+    username: root
+    password: zheng1130
+    initialSize: 50
+    minIdle: 5
+    maxActive: 100000
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    #   配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙d
+    filters: stat,wall,log4j
+    maxPoolPreparedStatementPerConnectionSize: 30
+    useGlobalDataSourceStat: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+  redis:
+    host: 106.15.248.97
+    password: zheng1130
+    database: 0
+    port: 6379
+
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
