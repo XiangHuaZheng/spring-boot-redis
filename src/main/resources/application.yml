@@ -4,7 +4,7 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     url: jdbc:mysql://106.15.248.97:33306/cache
     username: root
-    password: zheng1130
+    password: ******
     initialSize: 50
     minIdle: 5
     maxActive: 100000
@@ -23,7 +23,7 @@ spring:
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
   redis:
     host: 106.15.248.97
-    password: zheng1130
+    password: ******
     database: 0
     port: 6379
 
