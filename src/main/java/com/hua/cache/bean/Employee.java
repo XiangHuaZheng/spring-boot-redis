@@ -8,7 +8,7 @@ public class Employee implements Serializable {
 	private String lastName;
 	private String email;
 	private Integer gender; //性别 1男  0女
-	private Integer dId;
+	private Integer goodsId;
 	
 	
 	public Employee() {
@@ -16,13 +16,13 @@ public class Employee implements Serializable {
 	}
 
 	
-	public Employee(Integer id, String lastName, String email, Integer gender, Integer dId) {
+	public Employee(Integer id, String lastName, String email, Integer gender, Integer goodsId) {
 		super();
 		this.id = id;
 		this.lastName = lastName;
 		this.email = email;
 		this.gender = gender;
-		this.dId = dId;
+		this.goodsId = goodsId;
 	}
 	
 	public Integer getId() {
@@ -49,16 +49,16 @@ public class Employee implements Serializable {
 	public void setGender(Integer gender) {
 		this.gender = gender;
 	}
-	public Integer getdId() {
-		return dId;
+	public Integer getGoodsId() {
+		return goodsId;
 	}
-	public void setdId(Integer dId) {
-		this.dId = dId;
+	public void setGoodsId(Integer goodsId) {
+		this.goodsId = goodsId;
 	}
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", lastName=" + lastName + ", email=" + email + ", gender=" + gender + ", dId="
-				+ dId + "]";
+		return "Employee [id=" + id + ", lastName=" + lastName + ", email=" + email + ", gender=" + gender + ", goodsId="
+				+ goodsId + "]";
 	}
 	
 	

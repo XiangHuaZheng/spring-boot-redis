@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Update;
 
 public interface EmployeeMapper {
 
-    @Insert("INSERT INTO employee(lastName,email,gender,d_id) VALUE(#{lastName},#{email},#{gender},#{dId})")
+    @Insert("INSERT INTO employee(lastName,email,gender,goods_id) VALUE(#{lastName},#{email},#{gender},#{goodsId})")
     void insertEmp(Employee employee);
 
     @Delete("DELETE FROM employee WHERE id = #{id}")
@@ -17,6 +17,6 @@ public interface EmployeeMapper {
     @Select("SELECT * FROM employee WHERE id = #{id}")
     Employee getEmpById(Integer id);
 
-    @Update("UPDATE employee SET lastName=#{lastName},email=#{email},gender=#{gender},d_id=#{dId} WHERE id=#{id}")
+    @Update("UPDATE employee SET lastName=#{lastName},email=#{email},gender=#{gender},goods_id=#{goodsId} WHERE id=#{id}")
     void updateEmp(Employee employee);
 }

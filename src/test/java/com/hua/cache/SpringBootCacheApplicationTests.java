@@ -3,6 +3,11 @@ package com.hua.cache;
 import com.hua.cache.bean.Employee;
 import com.hua.cache.service.EmployeeService;
 import org.junit.jupiter.api.Test;
+import org.springframework.amqp.core.AmqpAdmin;
+import org.springframework.amqp.core.Binding;
+import org.springframework.amqp.core.DirectExchange;
+import org.springframework.amqp.core.Queue;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
@@ -15,10 +20,25 @@ import java.util.concurrent.CountDownLatch;
 @SpringBootTest
 class SpringBootCacheApplicationTests {
 
+/*
     @Autowired
-    EmployeeService employeeService;
+    RabbitTemplate rabbitTemplate;
 
-    @Resource(name="asyncServiceExecutor")
+    @Autowired
+    AmqpAdmin amqpAdmin;
+
+    @Test
+    void createExchangeAndQueue(){
+        amqpAdmin.declareExchange(new DirectExchange("exchange.emp"));
+        amqpAdmin.declareQueue(new Queue("queue.emp",true));
+        amqpAdmin.declareBinding(new Binding("queue.emp", Binding.DestinationType.QUEUE,"exchange.emp","amqp.buy",null));
+    }
+*/
+
+  /*  @Autowired
+    EmployeeService employeeService;
+*/
+  /*  @Resource(name="asyncServiceExecutor")
     private ThreadPoolTaskExecutor taskExecutor;
 
     @Test
@@ -54,7 +74,7 @@ class SpringBootCacheApplicationTests {
             System.out.println("阻塞异常");
         }
     }
-
+*/
 
 /*    @Test
     public  void  test2()throws Exception{

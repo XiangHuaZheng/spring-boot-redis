@@ -7,6 +7,7 @@ import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -15,11 +16,12 @@ public class EmployeeService {
     @Autowired
     EmployeeMapper employeeMapper;
 
+
     public void insertEmp(Employee employee){
         employeeMapper.insertEmp(employee);
     }
 
-    //@CacheEvict(key = "#id")
+    @CacheEvict(key = "#id")
     public void deleteEmp(Integer id){
         employeeMapper.deleteEmp(id);
     }
@@ -31,7 +33,8 @@ public class EmployeeService {
     }
 
     @CachePut(key = "#result.id")
-    public void updateEmp(Employee employee){
+    public Employee updateEmp(Employee employee){
         employeeMapper.updateEmp(employee);
+        return employee;
     }
 }
