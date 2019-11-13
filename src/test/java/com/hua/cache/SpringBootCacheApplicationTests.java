@@ -20,8 +20,7 @@ import java.util.concurrent.CountDownLatch;
 @SpringBootTest
 class SpringBootCacheApplicationTests {
 
-/*
-    @Autowired
+/*    @Autowired
     RabbitTemplate rabbitTemplate;
 
     @Autowired
@@ -30,10 +29,9 @@ class SpringBootCacheApplicationTests {
     @Test
     void createExchangeAndQueue(){
         amqpAdmin.declareExchange(new DirectExchange("exchange.emp"));
-        amqpAdmin.declareQueue(new Queue("queue.emp",true));
+        amqpAdmin.declareQueue(new Queue("queue.emp",false));
         amqpAdmin.declareBinding(new Binding("queue.emp", Binding.DestinationType.QUEUE,"exchange.emp","amqp.buy",null));
-    }
-*/
+    }*/
 
   /*  @Autowired
     EmployeeService employeeService;
